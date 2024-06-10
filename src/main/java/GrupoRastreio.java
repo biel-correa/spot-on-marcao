@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class GrupoRastreio implements IGrupo {
     private String status = "publico";
-    private List<Dispositivo> dispositivos;
+    private List<Dispositivo> dispositivos = new ArrayList<>();
 
     @Override
     public String convidar(String email) {
