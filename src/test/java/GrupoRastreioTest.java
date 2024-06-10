@@ -155,4 +155,16 @@ class GrupoRastreioTest {
         assertEquals("Dispositivo adicionado com sucesso", result);
         assertEquals(dispositivo, grupoRastreio.getDispositivos().get(0));
     }
+
+    @Test
+    void DeveSetarDispositivos() {
+        var dispositivo = new Dispositivo();
+        dispositivo.setNome("Nome");
+        dispositivo.setDescricao("Descrição");
+        dispositivo.setLatitude(0);
+        dispositivo.setLongitude(0);
+        dispositivo.setTags(List.of(new Tag("Entrega", "Entrega dos correios", "#FF0000")));
+        grupoRastreio.setDispositivos(List.of(dispositivo));
+        assertEquals(dispositivo, grupoRastreio.getDispositivos().get(0));
+    }
 }
